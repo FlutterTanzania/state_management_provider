@@ -10,7 +10,7 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => CounterNotifier()),
-        FutureProvider<List<String>>(create: (_) => FetchUSCities().fetchUSCities, initialData: const []),
+        //TODO: Add US Cities FutureProvider
       ],
       child: const MyApp(),
     ),

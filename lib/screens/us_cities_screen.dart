@@ -15,15 +15,7 @@ class _UsCitiesState extends State<UsCities> {
     return SizedBox(
       width: double.infinity,
       height: height,
-      child: Consumer<List<String>>(
-        builder: (context, cities, child) {
-          return cities.isEmpty
-              ? const _CitiesLoadingIndicator()
-              : _ShowUsCities(
-                  usCities: cities,
-                );
-        },
-      ),
+      child: //TODO Add a Consumer widget to show US Cities
     );
   }
 }
