@@ -8,11 +8,16 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => CounterNotifier()),
+        //TODO: Add change notifier for CounterNotifier()
       ],
       child: const MyApp(),
     ),
   );
+
+  // This is how we normally implement the runApp method.
+  // runApp(
+  //   const MyApp()
+  // );
 }
 
 class MyApp extends StatelessWidget {

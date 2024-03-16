@@ -14,7 +14,8 @@ class CounterScreen extends StatefulWidget {
 class _CounterScreenState extends State<CounterScreen> {
   @override
   Widget build(BuildContext context) {
-    final provider = Provider.of<CounterNotifier>(context);
+
+    //TODO: Get the Provider<CounterNotifier>
 
     return Scaffold(
       body: Center(
@@ -22,24 +23,29 @@ class _CounterScreenState extends State<CounterScreen> {
           builder: (context, counter, child) {
             return Column(
               children: [
-                child ?? Container(),
+                const _OurTextContainer(),
+
+                //TODO: use child to return _OurTextContainer
+
                 const SizedBox(
                   height: 16,
                 ),
                 Text(
-                  counter.count.toString(),
+                  //TODO: Read the counter value
                   style: const TextStyle(fontSize: 45),
                 ),
               ],
             );
           },
-          child: const _OurTextContainer(),
+
+          //TODO: define _OurTextContainer as a child
+
         ),
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
         onPressed: () {
-          provider.increment();
+          //TODO: Increment the counter
         },
       ),
     );
