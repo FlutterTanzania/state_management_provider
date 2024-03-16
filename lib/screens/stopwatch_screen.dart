@@ -11,17 +11,6 @@ class StopWatchScreen extends StatefulWidget {
 class _StopWatchScreenState extends State<StopWatchScreen> {
   @override
   Widget build(BuildContext context) {
-    return Consumer<int>(builder: (context, number, child) {
-      return SizedBox(
-        child: Center(
-          child: Text(
-            number.toString(),
-            style: const TextStyle(
-              fontSize: 45,
-            ),
-          ),
-        ),
-      );
-    });
+    //TODO: Return a Consumer to consume IntStreamGenerator Data
   }
 }

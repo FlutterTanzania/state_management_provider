@@ -12,7 +12,7 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (_) => CounterNotifier()),
         FutureProvider<List<String>>(create: (_) => FetchUSCities().fetchUSCities, initialData: const []),
-        StreamProvider<int>(create: (_) => IntStreamGenerator.generateIntStream(), initialData: 0)
+        //TODO: Add a StreamProvider for a IntStreamGenerator
       ],
       child: const MyApp(),
     ),
