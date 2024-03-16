@@ -37,7 +37,10 @@ class _CitiesLoadingIndicator extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('Fetching US Cities.....'),
+          Text(
+            'Fetching US Cities.....',
+            style: TextStyle(fontSize: 18),
+          ),
           SizedBox(
             height: 16,
           ),
