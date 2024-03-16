@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class StopWatchScreen extends StatefulWidget {
   const StopWatchScreen({super.key});
@@ -10,8 +11,17 @@ class StopWatchScreen extends StatefulWidget {
 class _StopWatchScreenState extends State<StopWatchScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blue,
-    );
+    return Consumer<int>(builder: (context, number, child) {
+      return SizedBox(
+        child: Center(
+          child: Text(
+            number.toString(),
+            style: const TextStyle(
+              fontSize: 45,
+            ),
+          ),
+        ),
+      );
+    });
   }
 }
