@@ -14,7 +14,7 @@ class CounterScreen extends StatefulWidget {
 class _CounterScreenState extends State<CounterScreen> {
   @override
   Widget build(BuildContext context) {
-    final provider = Provider.of<CounterNotifier>(context);
+    final provider = Provider.of<CounterNotifier>(context, listen: false);
 
     return Scaffold(
       body: Center(
