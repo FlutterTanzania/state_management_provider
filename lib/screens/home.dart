@@ -13,8 +13,8 @@ class HomePage extends StatefulWidget {
 
 final pages = [
   const CounterScreen(),
-  const StopWatchScreen(),
   const UsCities(),
+  const StopWatchScreen()
 ];
 
 final title = ["Counter", "US Cities", "StopWatch"];
@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
       body: pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
-        onTap: (index){
+        onTap: (index) {
           setState(() {
             _currentIndex = index;
           });

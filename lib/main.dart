@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:state_management_provider/screens/home.dart';
+import 'package:state_management_provider/services/fetch_us_cities.dart';
 
 import 'notifiers/counter_notifier.dart';
 
@@ -9,6 +10,7 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => CounterNotifier()),
+        FutureProvider<List<String>>(create: (_) => FetchUSCities().fetchUSCities, initialData: const []),
       ],
       child: const MyApp(),
     ),
